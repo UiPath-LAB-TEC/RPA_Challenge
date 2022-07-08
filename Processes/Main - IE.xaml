@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>894,3219</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1370,3223</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -62,7 +62,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="RPA Challenge adjusted for the new RPA Challenge site." DisplayName="RPA Challenge" sap:VirtualizedContainerService.HintSize="615,3154" sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence sap2010:Annotation.AnnotationText="RPA Challenge adjusted for the new RPA Challenge site." DisplayName="RPA Challenge" sap:VirtualizedContainerService.HintSize="615,3158" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="rpaChallengeDT" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="delay" />
@@ -126,13 +126,13 @@
         </ui:ForEach.Body>
       </ui:ForEach>
     </Sequence>
-    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open browser" Hidden="False" sap:VirtualizedContainerService.HintSize="573,2243" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="http://rpachallenge.com">
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open browser" Hidden="False" sap:VirtualizedContainerService.HintSize="573,2247" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="http://rpachallenge.com">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539,2144" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539,2148" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -187,37 +187,37 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7959c5823425b675129c46462f917d06" Selector="&lt;webctrl tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="67ce9bb2474d45e09c6a160d6a28cc1c" Selector="&lt;webctrl tag='BUTTON' type='submit' /&gt;" WaitForReady="INTERACTIVE" />
               </ui:Click.Target>
             </ui:Click>
-            <ui:ForEach x:TypeArguments="s:String[]" CurrentIndex="{x:Null}" DisplayName="Collection Approach" sap:VirtualizedContainerService.HintSize="497,1553" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[rpaChallengeStrMatrix]">
+            <ui:ForEach x:TypeArguments="s:String[]" CurrentIndex="{x:Null}" DisplayName="Collection Approach" sap:VirtualizedContainerService.HintSize="497,1557" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[rpaChallengeStrMatrix]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="s:String[]">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:String[]" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1420" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="356,1424" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="50" DelayMS="[delay]" DisplayName="Type First Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[row(0)]">
+                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="50" DelayMS="[delay]" DisplayName="Type First Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="314.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[row(0)]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e9a201aa872bcc6f2f999a8fb3fe35f5" Selector="&lt;webctrl aaname='First Name' tag='DIV' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="[delay]" DelayMS="[delay]" DisplayName="Type Last Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True" Text="[row(1)]">
+                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="[delay]" DelayMS="[delay]" DisplayName="Type Last Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="314.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True" Text="[row(1)]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a105041ab9a0734f851492b8c631a653" Selector="&lt;webctrl aaname='Last Name' tag='DIV' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="[delay]" DelayMS="[delay]" DisplayName="Type Company Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[row(2)]">
+                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="[delay]" DelayMS="[delay]" DisplayName="Type Company Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="314.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[row(2)]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="78b44bbb266f6923fc1aa0ca8d147571" Selector="&lt;webctrl aaname='Company Name' tag='DIV' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="[delay]" DelayMS="[delay]" DisplayName="Type Role in Company" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[row(3)]">
+                    <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="[delay]" DelayMS="[delay]" DisplayName="Type Role in Company" EmptyField="False" sap:VirtualizedContainerService.HintSize="314.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[row(3)]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ec25e0b2bc0b8931aada2f85b581e17f" Selector="&lt;webctrl aaname='Role in Company' tag='DIV' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
                       </ui:TypeInto.Target>

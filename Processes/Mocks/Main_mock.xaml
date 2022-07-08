@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:utam="clr-namespace:UiPath.Testing.Activities.Mocks;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="speedString" Type="InArgument(ui:GenericValue)" />
   </x:Members>
@@ -11,7 +11,7 @@
   <sap:VirtualizedContainerService.HintSize>894,3219</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -36,10 +36,12 @@
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Reflection</x:String>
-    </sco:Collection>
+      <x:String>UiPath.Testing.Activities.Mocks</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -60,7 +62,8 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="RPA Challenge adjusted for the new RPA Challenge site." DisplayName="RPA Challenge" sap:VirtualizedContainerService.HintSize="615,3154" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
@@ -138,11 +141,23 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InputDialog DisplayName="Input dialog" sap:VirtualizedContainerService.HintSize="497,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="How fast?" Options="[{&quot;Slow&quot;,&quot;Fast&quot;,&quot;Super-Human&quot;}]" Title="RPA Challenge">
-              <ui:InputDialog.Result>
-                <OutArgument x:TypeArguments="ui:GenericValue">[speedString]</OutArgument>
-              </ui:InputDialog.Result>
-            </ui:InputDialog>
+            <utam:MockActivity DisplayName="Mock Input dialog" MockedActivityIdRef="InputDialog_1">
+              <utam:MockActivity.MockedActivity>
+                <ui:InputDialog DisplayName="Input dialog" sap:VirtualizedContainerService.HintSize="497,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="How fast?" Options="[{&quot;Slow&quot;,&quot;Fast&quot;,&quot;Super-Human&quot;}]" Title="RPA Challenge">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[speedString]</OutArgument>
+                  </ui:InputDialog.Result>
+                </ui:InputDialog>
+              </utam:MockActivity.MockedActivity>
+              <Sequence sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Comment sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// new Value will be taken from data variation sheet" />
+              </Sequence>
+            </utam:MockActivity>
             <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[speedString]" sap:VirtualizedContainerService.HintSize="497,181" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
