@@ -1,19 +1,19 @@
 {
   "name": "RPA Challenge",
+  "projectId": "c870691f-d97b-4914-9168-9f02de634e6c",
   "description": "Demo of RPA Challenge",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.4.6863.30657]",
-    "UiPath.Mail.Activities": "[1.2.6863.29868]",
-    "UiPath.System.Activities": "[18.3.6864.20561]",
-    "UiPath.Testing.Activities": "[22.4.3]",
-    "UiPath.UIAutomation.Activities": "[18.3.6877.28298]"
+    "UiPath.Excel.Activities": "[2.22.3]",
+    "UiPath.System.Activities.Runtime": "[24.3.0]",
+    "UiPath.Testing.Activities": "[23.10.1]",
+    "UiPath.UIAutomation.Activities.Runtime": "[23.10.11]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.6.0",
-  "projectVersion": "1.0.110790990",
+  "projectVersion": "3.0.3",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -21,6 +21,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -28,7 +29,8 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": false
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -43,25 +45,54 @@
     "fileInfoCollection": [
       {
         "editingStatus": "Publishable",
-        "testCaseId": "253d4d91-e197-429b-af30-b4059bda69e1",
-        "dataVariationFilePath": ".variations\\Variations_Sheet1.json",
+        "testCaseId": "cfe55dc6-6e0a-48bb-aa8d-4cc5cad06740",
+        "dataVariationFilePath": ".variations\\Variations_Sheet1_1.json",
         "testCaseType": "TestCase",
-        "fileName": "Test Cases\\FT_DataDriven_RPAChallenge.xaml"
+        "fileName": "TestCases\\TestCase.xaml"
       }
     ],
-    "modernBehavior": false
+    "modernBehavior": false,
+    "saveToCloud": false
+  },
+  "arguments": {
+    "input": [
+      {
+        "name": "in_SpeedString",
+        "type": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": true
+      }
+    ],
+    "output": [
+      {
+        "name": "out_UiBrowser",
+        "type": "UiPath.Core.Browser, UiPath.UiAutomation.Activities, Version=23.10.11.0, Culture=neutral, PublicKeyToken=null"
+      }
+    ]
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
       "uniqueId": "481d617d-12aa-42be-8b62-5e956aa0153a",
-      "input": [],
-      "output": []
+      "input": [
+        {
+          "name": "in_SpeedString",
+          "type": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": true
+        }
+      ],
+      "output": [
+        {
+          "name": "out_UiBrowser",
+          "type": "UiPath.Core.Browser, UiPath.UiAutomation.Activities, Version=23.10.11.0, Culture=neutral, PublicKeyToken=null"
+        }
+      ]
     }
   ],
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Legacy"
+  "targetFramework": "Windows"
 }
