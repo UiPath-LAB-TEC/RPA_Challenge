@@ -1,6 +1,5 @@
 {
   "name": "RPA Challenge",
-  "projectId": "e0432180-0569-4aa1-a8a8-5ca09b1dd5d1",
   "description": "Demo of RPA Challenge",
   "main": "Main.xaml",
   "dependencies": {
@@ -13,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.6.0",
-  "projectVersion": "3.0.167822820",
+  "projectVersion": "3.0.187826774",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -21,7 +20,6 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
-    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -48,11 +46,10 @@
         "testCaseId": "cfe55dc6-6e0a-48bb-aa8d-4cc5cad06740",
         "dataVariationFilePath": ".variations\\Variations_Sheet1_1.json",
         "testCaseType": "TestCase",
-        "fileName": "TestCases\\TestCase.xaml"
+        "fileName": "TestCases\\RPA_Challenge_VerifyMain.xaml"
       }
     ],
-    "modernBehavior": false,
-    "saveToCloud": false
+    "modernBehavior": false
   },
   "arguments": {
     "input": [
