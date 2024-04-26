@@ -1,19 +1,19 @@
 {
   "name": "RPA Challenge",
-  "projectId": "c870691f-d97b-4914-9168-9f02de634e6c",
+  "projectId": "e0432180-0569-4aa1-a8a8-5ca09b1dd5d1",
   "description": "Demo of RPA Challenge",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.3]",
-    "UiPath.System.Activities.Runtime": "[24.3.0]",
-    "UiPath.Testing.Activities": "[23.10.1]",
-    "UiPath.UIAutomation.Activities.Runtime": "[23.10.11]"
+    "UiPath.System.Activities": "[22.10.1]",
+    "UiPath.Testing.Activities": "[22.10.0]",
+    "UiPath.UIAutomation.Activities": "[22.10.1]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.6.0",
-  "projectVersion": "3.0.3",
+  "projectVersion": "3.0.167822820",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
